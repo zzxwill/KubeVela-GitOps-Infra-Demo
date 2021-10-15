@@ -9,4 +9,4 @@ spec:
       type: webservice
       properties:
         image: crccheck/hello-world
-        port: 8088
+        port: 8000
