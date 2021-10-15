@@ -8,19 +8,5 @@ spec:
     - name: my-server
       type: webservice
       properties:
-        image: ghcr.io/fogdong/test-fog:master-ae837438-1633938401
-        port: 8088
-        env:
-          - name: DB_HOST
-            value: mysql-cluster-mysql.default.svc.cluster.local:3306
-          - name: DB_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: mysql-secret
-                key: ROOT_PASSWORD
-      traits:
-        - type: ingress
-          properties:
-            domain: test.example.com
-            http:
-              /: 8088
+        image: crccheck/hello-world
+        port: 8000
